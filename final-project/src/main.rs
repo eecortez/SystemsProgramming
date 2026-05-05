@@ -55,8 +55,9 @@ fn main() {
     let start_time = Instant::now();
     let tasks = generate_tasks(500);
 
-    // Change this to false for FIFO, true for optimized
-    let use_optimized = true;
+
+    let args: Vec<String> = std::env::args().collect();
+    let use_optimized = args.contains(&"--optimized".to_string());
 
     println!("Generated {} tasks", tasks.len());
 
