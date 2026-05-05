@@ -50,14 +50,14 @@ Optimized is faster but less fair.
 ## Tool Use Disclosure
 
 Tools used:
-- ChatGPT
-- Rust docs
+- ChatGPT (for guidance, debugging, and structuring the project)
+- Rust documentation
 
-Accepted advice:
-- Using Arc<Mutex> for shared queue
+Advice accepted:
+- Using Arc<Mutex<VecDeque>> for safely sharing the queue across threads
 
-Rejected/fixed:
-- Initially placed scheduling logic outside threads, causing errors
+Advice rejected or fixed:
+- Initially placed scheduling logic outside the worker threads, which caused errors and incorrect behavior. This was corrected by moving the logic inside the worker loop.
 
 ---
 
