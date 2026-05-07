@@ -3,8 +3,9 @@
 ## Overview
 This project simulates a concurrent task dispatcher system similar to an operating system scheduler.
 
-Tasks are generated, placed into a shared queue, and processed by worker threads using different scheduling policies.
-
+    Tasks are generated, placed into a shared queue, and processed by worker threads using different scheduling policies.
+    The main optimization goal was reducing total runtime. The optimized scheduling policy reduced total runtime from 3735 ms to 3701 ms while also lowering average wait time.
+    
 ---
 
 ## How to Run
